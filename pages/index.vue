@@ -3,6 +3,14 @@
     <h1>
       Students management app
     </h1>
+    <div class="d-flex justify-end mb-10">
+      <v-btn
+        color="success"
+        @click="handleCreate"
+      >
+        Добавить ученика
+      </v-btn>
+    </div>
     <StudentsList />
   </div>
 </template>
@@ -14,6 +22,11 @@ export default {
   name: 'Index',
   components: {
     StudentsList,
+  },
+  methods: {
+    handleCreate() {
+      this.$router.push({ name: 'students-add' });
+    },
   },
 };
 </script>

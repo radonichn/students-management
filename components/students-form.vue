@@ -56,10 +56,7 @@ export default {
   props: {
     value: {
       type: Object,
-      default: () => ({
-        name: null,
-        favoriteGenres: [],
-      }),
+      default: () => ({}),
     },
     isEdit: {
       type: Boolean,
