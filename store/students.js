@@ -41,9 +41,9 @@ export const mutations = {
   [ADD_STUDENT]: (state, payload) => {
     state.students.push(payload);
   },
-  [EDIT_STUDENT]: (state, { student, editStudentId }) => {
+  [EDIT_STUDENT]: (state, student) => {
     const students = [...state.students];
-    const studentIndex = students.findIndex(v => v.id === editStudentId);
+    const studentIndex = students.findIndex(v => v.id === student.id);
     students[studentIndex] = student;
     state.students = students;
   },

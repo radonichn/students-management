@@ -1,5 +1,8 @@
 <template>
   <div>
+    <h1 class="text-center">
+      Изменение данных об ученике
+    </h1>
     <StudentsForm
       v-model="currentStudent"
       @on-submit="handleSubmit"
@@ -38,11 +41,7 @@ export default {
       this.currentStudent = { ...this.getStudentById(this.studentId) } || {};
     },
     handleSubmit() {
-      const payload = {
-        editStudentId: this.studentId,
-        student: { ...this.currentStudent },
-      };
-      this.editStudent(payload);
+      this.editStudent({ ...this.currentStudent });
       this.$router.push('/');
     },
   },

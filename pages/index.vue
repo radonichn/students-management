@@ -1,7 +1,7 @@
 <template>
   <div class="students-management">
-    <h1>
-      Students management app
+    <h1 class="text-center mb-15">
+      Панель управления учениками
     </h1>
     <div class="d-flex justify-end mb-10">
       <v-btn
@@ -34,10 +34,5 @@ export default {
 <style>
 .students-management {
   margin: 30px 0;
-}
-
-.students-management h1 {
-  text-align: center;
-  margin-bottom: 25px;
 }
 </style>

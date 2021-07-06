@@ -1,5 +1,8 @@
 <template>
   <div>
+    <h1 class="text-center">
+      Добавление ученика
+    </h1>
     <StudentsForm
       v-model="currentStudent"
       @on-submit="handleSubmit"
@@ -30,7 +33,10 @@ export default {
       addStudent: 'ADD_STUDENT',
     }),
     handleSubmit() {
-      this.addStudent({ ...this.currentStudent });
+      this.addStudent({
+        id: new Date().valueOf(),
+        ...this.currentStudent,
+      });
       this.$router.push('/');
     },
   },
